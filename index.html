@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>J&D Motors — Cars for Sale</title>
+    <meta name="description" content="J&D Motors — Quality used cars for sale. Request test drives, contact us, view inventory." />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Simple icons (optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+      :root { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+      .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+
+    <!-- NAV -->
+    <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-sm border-b">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-slate-800 to-gray-600 flex items-center justify-center text-white font-bold">J&D</div>
+          <div>
+            <span class="font-semibold">J&amp;D Motors</span>
+            <div class="text-xs text-gray-500">119 S Lyman St, Wadsworth, OH</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex gap-6 items-center text-sm font-medium">
+          <a href="#inventory" class="hover:text-sky-600">Inventory</a>
+          <a href="#about" class="hover:text-sky-600">About</a>
+          <a href="#contact" class="hover:text-sky-600">Contact</a>
+          <a href="tel:3308383789" class="px-4 py-2 bg-sky-600 text-white rounded-md shadow">Call Us</a>
+        </nav>
+
+        <!-- mobile menu toggle -->
+        <div class="md:hidden">
+          <button id="menuBtn" aria-label="toggle menu" class="p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- mobile drawer -->
+      <div id="mobileMenu" class="hidden md:hidden border-t">
+        <div class="px-6 py-4 flex flex-col gap-3">
+          <a href="#inventory">Inventory</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:3308383789" class="px-4 py-2 bg-sky-600 text-white rounded-md text-center">Call Us</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="home">
+      <section class="relative bg-[url('https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&s=8f9f6c607f7c9cd092f8f2e2e4b9b3f7')] bg-cover bg-center h-[60vh] flex items-center">
+        <div class="max-w-6xl mx-auto px-6 text-white">
+          <div class="w-full max-w-3xl glass p-8 rounded-2xl shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-extrabold">Find your next car at J&amp;D Motors</h1>
+            <p class="mt-2 text-gray-800">Quality pre-owned vehicles, competitive prices, and a hassle-free buying experience in Wadsworth, OH.</p>
+
+            <div class="mt-6 flex gap-3">
+              <a href="#inventory" class="inline-block px-5 py-3 bg-sky-600 text-white rounded-md shadow-md">View Inventory</a>
+              <a href="#contact" class="inline-block px-5 py-3 border border-white rounded-md">Contact Us</a>
+            </div>
+
+            <div class="mt-6 text-sm text-gray-700">
+              <strong>Call:</strong> <a href="tel:3308383789">(330) 838-3789</a> &nbsp; • &nbsp; <strong>Email:</strong> <a href="mailto:jamesdave19666@gmail.com">jamesdave19666@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="max-w-6xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white rounded-xl shadow">
+            <h3 class="font-semibold">Quality Checked</h3>
+            <p class="mt-2 text-sm text-gray-600">Each vehicle is inspected by our technicians before listing.</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow">
+            <h3 class="font-semibold">Flexible Financing</h3>
+            <p class="mt-2 text-sm text-gray-600">We’ll help arrange financing options that fit your budget.</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow">
+            <h3 class="font-semibold">Test Drives Available</h3>
+            <p class="mt-2 text-sm text-gray-600">Book a test drive and get behind the wheel today.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- INVENTORY -->
+      <section id="inventory" class="max-w-6xl mx-auto px-6 pb-12">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Inventory</h2>
+          <div class="text-sm text-gray-500">Showing featured vehicles</div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Card 1 -->
+          <article class="bg-white rounded-xl shadow overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=86d7f7d2a6b3adbb0f2f8a3a4b2ad0ef" alt="2020 Sedan" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h3 class="font-semibold">2020 Honda Accord</h3>
+              <p class="text-sm text-gray-600 mt-1">Sedan • 45,000 miles • Automatic</p>
+              <div class="mt-3 flex items-baseline justify-between">
+                <div class="text-lg font-bold">$18,900</div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-2 rounded-md border hover:bg-gray-100" onclick="scrollToContact('Test drive request: 2020 Honda Accord')">Request Test Drive</button>
+                  <a href="mailto:jamesdave19666@gmail.com?subject=Interested%20in%202020%20Honda%20Accord" class="px-3 py-2 bg-rose-600 text-white rounded-md">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="bg-white rounded-xl shadow overflow-hidden">
+            <img src="https://i.ytimg.com/vi/x1CymOftbqI/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGGUgXihZMA8=&rs=AOn4CLBJ3uBXaIy8q8Ur0S_vohdnyXM7kg" alt="2018 SUV" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h3 class="font-semibold">2018 Toyota RAV4</h3>
+              <p class="text-sm text-gray-600 mt-1">SUV • 60,000 miles • AWD</p>
+              <div class="mt-3 flex items-baseline justify-between">
+                <div class="text-lg font-bold">$20,500</div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-2 rounded-md border hover:bg-gray-100" onclick="scrollToContact('Test drive request: 2018 Toyota RAV4')">Request Test Drive</button>
+                  <a href="mailto:jamesdave19666@gmail.com?subject=Interested%20in%202018%20Toyota%20RAV4" class="px-3 py-2 bg-rose-600 text-white rounded-md">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="bg-white rounded-xl shadow overflow-hidden">
+            <img src="https://i.ytimg.com/vi/u0JKoVZjZ6s/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGEgYShhMA8=&rs=AOn4CLBnc8G0pKZ1BP4rsFiS4nsVCHXjzw" alt="2019 Coupe" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h3 class="font-semibold">2019 Ford Mustang</h3>
+              <p class="text-sm text-gray-600 mt-1">Coupe • 35,000 miles • Manual</p>
+              <div class="mt-3 flex items-baseline justify-between">
+                <div class="text-lg font-bold">$27,900</div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-2 rounded-md border hover:bg-gray-100" onclick="scrollToContact('Test drive request: 2019 Ford Mustang')">Request Test Drive</button>
+                  <a href="mailto:jamesdave19666@gmail.com?subject=Interested%20in%202019%20Ford%20Mustang" class="px-3 py-2 bg-rose-600 text-white rounded-md">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="bg-white rounded-xl shadow overflow-hidden">
+            <img src="https://cdn-fastly.autoguide.com/media/2023/06/07/12307093/2016-chrysler-town-and-country-review.jpg?size=720x845&nocrop=1" alt="2017 Pickup" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h3 class="font-semibold">2017 Chevrolet Silverado</h3>
+              <p class="text-sm text-gray-600 mt-1">Pickup • 82,000 miles • V8</p>
+              <div class="mt-3 flex items-baseline justify-between">
+                <div class="text-lg font-bold">$22,300</div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-2 rounded-md border hover:bg-gray-100" onclick="scrollToContact('Test drive request: 2017 Chevrolet Silverado')">Request Test Drive</button>
+                  <a href="mailto:jamesdave19666@gmail.com?subject=Interested%20in%202017%20Chevrolet%20Silverado" class="px-3 py-2 bg-rose-600 text-white rounded-md">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="bg-white rounded-xl shadow overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="2021 Hatchback" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h3 class="font-semibold">2021 Volkswagen Golf</h3>
+              <p class="text-sm text-gray-600 mt-1">Hatchback • 28,000 miles • Automatic</p>
+              <div class="mt-3 flex items-baseline justify-between">
+                <div class="text-lg font-bold">$16,800</div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-2 rounded-md border hover:bg-gray-100" onclick="scrollToContact('Test drive request: 2021 Volkswagen Golf')">Request Test Drive</button>
+                  <a href="mailto:jamesdave19666@gmail.com?subject=Interested%20in%202021%20Volkswagen%20Golf" class="px-3 py-2 bg-rose-600 text-white rounded-md">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="bg-white rounded-xl shadow overflow-hidden">
+            <img src="https://static.cargurus.com/images/forsale/2025/09/23/15/42/2016_chrysler_town___country-pic-9030623344267997744-1024x768.jpeg?io=true&width=640&height=480&dpr=2&fit=bounds&format=jpg&auto=webp" alt="2016 Van" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h3 class="font-semibold">2016 Chrysler Town & Country</h3>
+              <p class="text-sm text-gray-600 mt-1">Minivan • 95,000 miles • FWD</p>
+              <div class="mt-3 flex items-baseline justify-between">
+                <div class="text-lg font-bold">$11,250</div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-2 rounded-md border hover:bg-gray-100" onclick="scrollToContact('Test drive request: 2016 Chrysler Town & Country')">Request Test Drive</button>
+                  <a href="mailto:jamesdave19666@gmail.com?subject=Interested%20in%202016%20Chrysler%20Town%20&%20Country" class="px-3 py-2 bg-rose-600 text-white rounded-md">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="bg-white border-t py-12">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-2xl font-bold">About J&amp;D Motors</h2>
+            <p class="mt-4 text-gray-600">Located at 119 S Lyman St in Wadsworth, OH, J&amp;D Motors provides high-quality pre-owned vehicles with transparent pricing and reliable service. Our team inspects every vehicle and helps customers find a car that fits their needs and budget.</p>
+            <ul class="mt-4 text-sm text-gray-600 space-y-2">
+              <li>• Friendly, knowledgeable sales team</li>
+              <li>• Vehicle history reports available</li>
+              <li>• Test drives and flexible financing</li>
+            </ul>
+          </div>
+          <div>
+            <!-- <div class="w-full h-56 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400"><img src="image.jpg" alt=""></div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="max-w-6xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-bold">Contact Us</h2>
+        <div class="mt-6 grid md:grid-cols-2 gap-8">
+
+          <!-- form -->
+          <div class="bg-white p-6 rounded-xl shadow">
+            <form id="contactForm" action="https://formspree.io/f/{your_form_id}" method="POST" mailto:>
+              <!-- Replace {your_form_id} with your Formspree form id. Alternatively, use a server endpoint. -->
+
+              <label class="block text-sm font-medium">Full name</label>
+              <input name="name" required class="mt-1 w-full rounded-md border p-2" placeholder="Your full name">
+
+              <label class="block text-sm font-medium mt-4">Email</label>
+              <input type="email" name="email" required class="mt-1 w-full rounded-md border p-2" placeholder="you@example.com">
+
+              <label class="block text-sm font-medium mt-4">Phone</label>
+              <input name="phone" class="mt-1 w-full rounded-md border p-2" placeholder="(330) 555-0123">
+
+              <label class="block text-sm font-medium mt-4">Message</label>
+              <textarea name="message" rows="4" required class="mt-1 w-full rounded-md border p-2" placeholder="How can we help?"></textarea>
+
+              <input type="hidden" name="_subject" value="Website contact form - J&D Motors">
+
+              <div class="mt-4 flex items-center gap-3">
+                <button type="submit" class="px-4 py-2 bg-sky-600 text-white rounded-md">Send Message</button>
+                <button type="button" onclick="prefillContact()" class="px-4 py-2 border rounded-md">Prefill Demo</button>
+              </div>
+
+              <p class="mt-3 text-xs text-gray-500">We will respond within 1 business day. By contacting you agree to our privacy policy.</p>
+            </form>
+          </div>
+
+          <!-- contact details + map -->
+          <div>
+            <div class="bg-white p-6 rounded-xl shadow">
+              <h3 class="font-semibold">J&amp;D Motors</h3>
+              <p class="text-sm text-gray-600 mt-2">119 S Lyman St, Wadsworth, OH 44281</p>
+              <p class="text-sm text-gray-600">Phone: <a href="tel:3308383789">(330) 838-3789</a></p>
+              <p class="text-sm text-gray-600">Email: <a href="mailto:jamesdave19666@gmail.com">jamesdave19666@gmail.com</a></p>
+
+              <div class="mt-4 w-full h-56 rounded-md overflow-hidden border">
+                <!-- Google Maps embed: replace the src if you have an API key or custom iframe -->
+                <iframe
+                  loading="lazy"
+                  src="https://www.google.com/maps?q=119+S+Lyman+St+Wadsworth+OH+44281&output=embed"
+                  class="w-full h-full"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+
+              <div class="mt-4 text-sm text-gray-500">Open Mon-Fri 9:00 AM — 6:00 PM</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="border-t py-6 mt-6 bg-white">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="text-sm text-gray-600">© <span id="year"></span> J&amp;D Motors — 119 S Lyman St, Wadsworth, OH</div>
+          <div class="flex gap-4 text-sm">
+            <a href="#inventory">Inventory</a>
+            <a href="#contact">Contact</a>
+            <a href="mailto:jamesdave19666@gmail.com">Email Us</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // mobile menu toggle
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+      // set footer year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // scroll to contact and prefill message when clicking "Request Test Drive"
+      function scrollToContact(prefillText) {
+        const contactSection = document.getElementById('contact');
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        // prefill form message
+        setTimeout(() => {
+          const msg = document.querySelector('#contactForm textarea[name="message"]');
+          if (msg) msg.value = prefillText + "\nPreferred date/time: ";
+        }, 600);
+      }
+
+      // demo prefill
+      function prefillContact() {
+        document.querySelector('input[name="name"]').value = 'John Doe';
+        document.querySelector('input[name="email"]').value = 'johndoe@example.com';
+        document.querySelector('input[name="phone"]').value = '(330) 555-0123';
+        document.querySelector('textarea[name="message"]').value = 'I\'d like to schedule a test drive for the 2019 Ford Mustang. Preferred time: Saturday 11am.';
+      }
+
+      // small accessibility: trap focus in mobile menu when open (optional enhancement)
+    </script>
+  </body>
+</html>
